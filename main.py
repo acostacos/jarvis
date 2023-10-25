@@ -2,7 +2,7 @@ from jarvis import Jarvis
 
 def main():
     j = Jarvis(language='english+f3') 
-    j.listen_for_name()
+    j.accept_commands()
 
     # Keep listening for name in background
     # If name is heard, acknowledge

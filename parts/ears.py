@@ -12,7 +12,7 @@ class Ears:
             audio = self.recognizer.listen(source)
 
         try:
-            return self.recognizer.recognize_google(audio)
+            return self.recognizer.recognize_sphinx(audio)
         except sr.UnknownValueError:
             return "Unable to recognize audio."
         except:
