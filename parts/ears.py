@@ -7,13 +7,14 @@ class Ears:
         with self.microphone as source:
             self.recognizer.adjust_for_ambient_noise(source)
 
-    def listen(self):
+    def listen_whisper(self):
         with self.microphone as source:
             audio = self.recognizer.listen(source)
 
         try:
-            return self.recognizer.recognize_sphinx(audio)
+            return self.recognizer.recognize_whisper(audio)
         except sr.UnknownValueError:
             return "Unable to recognize audio."
-        except:
+        except Exception as e:
+            print(e) 
             return "An unknown error occurred."

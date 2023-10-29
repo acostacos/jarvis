@@ -1,4 +1,6 @@
-SpeechRecognition==3.8.1
+SpeechRecognition==3.10.0
 PyAudio==0.2.12
 pyttsx3==2.90
-pocketsphinx==5.0.2
+openai==0.28.1
+openai-whisper==20230918
+soundfile==0.12.1

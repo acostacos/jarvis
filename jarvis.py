@@ -8,9 +8,8 @@ class Jarvis:
         self.mouth = Mouth(language)
 
     def accept_commands(self):
-        input = None
-        while input != self.name:
-            input = self.ears.listen()
-            print(input)
+        input = ''
+        while self.name not in input.lower():
+            input = self.ears.listen_whisper()
 
         self.mouth.say('Hello. What do you need?')

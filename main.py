@@ -1,12 +1,10 @@
 from jarvis import Jarvis
+import speech_recognition as sr
 
 def main():
     j = Jarvis(language='english+f3') 
     j.accept_commands()
 
-    # Keep listening for name in background
-    # If name is heard, acknowledge
-    # get question - Use whisper for recognition now
     # Get question and put it to open ai with prompt
     # Get prompt and convert to speech
 
