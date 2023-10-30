@@ -2,6 +2,9 @@ import speech_recognition as sr
 
 class Ears:
     def __init__(self):
+        self.model = 'tiny.en'
+        self.language = 'english'
+
         self.recognizer = sr.Recognizer()
         self.microphone = sr.Microphone() # Gets default microphone
         with self.microphone as source:
@@ -12,7 +15,8 @@ class Ears:
             audio = self.recognizer.listen(source)
 
         try:
-            return self.recognizer.recognize_whisper(audio)
+            output = self.recognizer.recognize_whisper(audio, model=self.model, language=self.language)
+            return output
         except sr.UnknownValueError:
             return "Unable to recognize audio."
         except Exception as e:

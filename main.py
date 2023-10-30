@@ -2,7 +2,7 @@ from jarvis import Jarvis
 import speech_recognition as sr
 
 def main():
-    j = Jarvis(language='english+f3') 
+    j = Jarvis() 
     j.accept_commands()
 
     # Get question and put it to open ai with prompt
